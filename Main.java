@@ -1,16 +1,16 @@
 package com.ds;
 
 public class Main {
- 
-	public static void main(String[] args) {
-		System.out.println("Welcome to data structure");
+	
+	//main method
+	public static void main(String[] args) {	
+		LinkedList linkedList=new LinkedList();
+		linkedList.push(56);
+		linkedList.push(30);
+		linkedList.push(70);
 		
-		LinkedList linkedList = new LinkedList();
-	    linkedList.insert(56);
-	    linkedList.insert(45);
-	    linkedList.insert(70);
-	    
-	    linkedList.print();
-	    
+		
+		System.out.println("LinkList:");
+		linkedList.print();	
 	}
 }
