@@ -4,29 +4,31 @@ package com.ds;
 public class LinkedList {
 	//creating head node 
 	Node head;
-
+	
 	class Node{
 		Node next;
 		int data;
-
-		//constructor 
-		public Node(int data) {
+	
+		 
+		public Node(int data) {  //constructor 
 			super();
 			this.next = next;
 			this.data = data;
 		}
 	}
-	//method to insert data in LinkList
-	public Node insert(int data) {
+	
+	
+	public Node insert(int data)     //insert at last position
+	{	
 		 Node newNode = new Node(data);
-		 if (head == null)
+		 if (head == null) 
 		 {
 			 head = newNode;
-		 }
+		 } 
 		 else
 		 {
-			 Node temp = head;
-			 while (temp.next != null)
+			 Node temp = head;				 
+			 while (temp.next != null) 
 			 {
 			 temp = temp.next;
 			 }
@@ -34,16 +36,18 @@ public class LinkedList {
 		 }
 		 return newNode;
 	 }
-
-	//method to push(Insertion at head node)
-	public void push(int data) {
+	
+	
+	public void push(int data)     //Insertion at head node
+	 {
 		 Node newNode = new Node(data);
 		 newNode.next = head;
 		 head = newNode;
 	 }
-
-	//method to Display LinkList
-	public void print() {
+	
+	
+	public void print()     //method to Display LinkList
+	 {			 
 		 Node temp = head;
 		 while (temp != null)
 		 {
@@ -52,5 +56,6 @@ public class LinkedList {
 		 }
 		 System.out.println();
 	 }
-
+	
+	
 }
