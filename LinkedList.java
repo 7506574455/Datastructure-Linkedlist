@@ -1,6 +1,5 @@
 package com.ds;
 
-
 public class LinkedList {
 	Node head;
 	
@@ -14,8 +13,8 @@ public class LinkedList {
 		 }
 	 }
 	 
-	 	
-	 	public Node insert (int data) {		// method of inserting data	
+	 	// method of inserting data
+	 	public Node insert (int data) {			
 			Node newNode = new Node(data);
 			if (head == null) {
 				head = newNode;
@@ -29,35 +28,43 @@ public class LinkedList {
 			return newNode;
 		}
 	
-		
-		public void push(int data) {   //method to push
+		//method to push
+		public void push(int data) {
 			 Node newNode = new Node(data);
 			 newNode.next = head;
 			 head = newNode;
 		 }
 
-		
-		public void print() {          // method to display inserted data
+		// method to display inserted data
+		public void print() {
 			Node temp = head;
 			while(temp!=null) {
-				System.out.println(temp.data+"->");
+				System.out.print(temp.data+"->");
 				temp = temp.next;
 			}
-		
+		System.out.println();
 		}
 
-	
-		public void insertAfter(Node previousNode, int value) {   // method to insert after a node
+		// method to insert after a node
+		public void insertAfter(Node prevNode, int value) {
 
-			if (previousNode == null) {
-			System.out.println("Previous Node should not be null");
+			if (prevNode == null) {
+			System.out.println("Prev Node should not be null");
 			return;
 			}
 			
 			Node newNode = new Node(value);
-			newNode.next = previousNode.next;
-			previousNode.next = newNode;
+			newNode.next = prevNode.next;
+			prevNode.next = newNode;
+			}
 
-			
+		public int pop() {
+			int popData = 0;
+			if (head == null) {
+			System.out.println("Stack Over flow");
+			}
+			popData = head.data;
+			head = head.next;
+			return popData;
 			}
 }
